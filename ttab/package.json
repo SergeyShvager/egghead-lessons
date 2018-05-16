@@ -1,0 +1,21 @@
+{
+  "name": "start-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-s tab:webpack-dev-server tab:backend open:page",
+    "open:page": "open 'http://localhost:3000/'",
+    "webpack-dev-server": "echo 'Webpack dev server started...'",
+    "backend": "echo 'Backend started...'",
+    "tab:webpack-dev-server": "ttab -t 'JS builds' npm run webpack-dev-server",
+    "tab:backend": "ttab -t 'Java server' npm run backend"
+  },
+  "keywords": [],
+  "author": "Sergii Shvager <sshvager@ebay.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.3",
+    "ttab": "^0.6.1"
+  }
+}
